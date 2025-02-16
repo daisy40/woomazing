@@ -2,16 +2,21 @@
 
 @theme {
   --font-raleway: "Raleway";
+
   --color-primary: #6E9C9F;
   --color-primary-hover: #509498;
   --color-secondary: #998E78;
 }
 
+
 body {
   font-family: var(--font-raleway);
-  font-weight: 500;
   color: black;
   letter-spacing: 0.02em;
+}
+
+h1, h2, h3, h4, p {
+  font-weight: 500;
 }
 
 h1 {
@@ -20,7 +25,7 @@ h1 {
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 44px;
 }
 
@@ -32,4 +37,74 @@ h3 {
 h4 {
   font-size: 20px;
   line-height: 28px;
+}
+
+@media (max-width: 64rem) {
+  h2 {
+    text-align: center;
+  }
+}
+
+p {
+  font-size: 17px;
+  line-height: 23.8px;
+}
+
+input {
+  height: 40px;
+  width: 350px;
+}
+
+textarea {
+  resize: none;
+  height: 134px;
+}
+
+a {
+  transition: all 500ms ease;
+}
+
+
+a:hover {
+  color: #6E9C9F;
+  text-decoration-color: #CEDEDF;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-underline-offset: 5px;
+}
+
+.active:hover {
+  text-decoration-line: none;
+}
+
+input,
+textarea {
+  border-bottom: black 1px solid;
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  vertical-align: top;
+}
+
+.active {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.swiper-wrapper {
+  transition-timing-function: all 0.5s ease;
+}
+
+.swiper-custom-bullet {
+  height: 2px;
+  width: 2px;
+  background-color: white;
+}
+
+.swiper-custom-bullet.swiper-custom-bullet-active {
+  height: 2px;
+  width: 2px;
+  background-color: orange;
 }
